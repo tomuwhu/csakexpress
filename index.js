@@ -9,7 +9,9 @@ app.use('/',express.static('fe/dist'))
 app.get(
     '/listall',
     (req, res) => {
-        res.send('Hello World!')
+        db.find({},(err,data) => 
+            res.send(data)
+        )
     }
 )
 
