@@ -5,9 +5,9 @@ const db = new Datastore({
         autoload: true
       })
 const app = express()
-
+app.use('/',express.static('fe/dist'))
 app.get(
-    '/',
+    '/listall',
     (req, res) => {
         res.send('Hello World!')
     }
